@@ -1,0 +1,133 @@
+
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #1db954;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #1ed760;
+}
+
+.music-card1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.song-item {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.song-item:hover {
+    transform: translateY(-5px);
+}
+
+.album-art1 {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.song-details1 {
+    margin-top: 10px;
+}
+
+.song-title1 {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.song-artist,
+.song-album {
+    color: #b3b3b3;
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.play-button {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    background-color: #1db954;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+    background-color: #1ed760;
+}
+
+@media (max-width: 600px) {
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .music-card1 {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .play-button {
+        width: 40px;
+        height: 40px;
+    }
+}
